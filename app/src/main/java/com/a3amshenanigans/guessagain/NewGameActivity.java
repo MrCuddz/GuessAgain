@@ -1,0 +1,60 @@
+package com.a3amshenanigans.guessagain;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+
+public class NewGameActivity extends AppCompatActivity {
+
+    private Spinner spinner_teams, spinner_players, spinner_rounds;
+    private Button button_submit;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_game);
+
+        initSpinners();
+        addListenerOnButton();
+
+
+    }
+
+    private void initSpinners() {
+        //find spinners
+        spinner_teams = (Spinner)findViewById(R.id.input_num_teams);
+        spinner_players = (Spinner)findViewById(R.id.input_num_players);
+        spinner_rounds = (Spinner)findViewById(R.id.input_num_rounds);
+        //create array adapters
+        ArrayAdapter adapter_teams, adapter_players, adapter_rounds;
+        adapter_teams = ArrayAdapter.createFromResource(this, R.array.input_teams, android.R.layout.simple_spinner_dropdown_item);
+        adapter_players = ArrayAdapter.createFromResource(this, R.array.input_players, android.R.layout.simple_spinner_dropdown_item);
+        adapter_rounds = ArrayAdapter.createFromResource(this, R.array.input_rounds, android.R.layout.simple_spinner_dropdown_item);
+        //set adapter layout
+        adapter_teams.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter_players.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter_rounds.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //add adapter to spinner
+        spinner_teams.setAdapter(adapter_teams);
+        spinner_players.setAdapter(adapter_players);
+        spinner_rounds.setAdapter(adapter_rounds);
+    }
+
+    private void addListenerOnButton() {
+        //find spinners
+        spinner_teams = (Spinner)findViewById(R.id.input_num_teams);
+        spinner_players = (Spinner)findViewById(R.id.input_num_players);
+        spinner_rounds = (Spinner)findViewById(R.id.input_num_rounds);
+        //find button
+        button_submit = (Button)findViewById(R.id.button_submit);
+        button_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+}

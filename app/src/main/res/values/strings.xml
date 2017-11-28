@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">Guess Again</string>
+    <string name="new_game">New Game</string>
+    <string name="rules">Rules</string>
+    <string name="settings">Settings</string>
+    <string name="title_game">Guess Again!</string>
+    <string name="game_description">A simple guessing game to play with your friends.</string>
+    <string name="rules_text">You will have 30 seconds to describe a list of items to your team. \n\nYou may not use the word or any subsets of the word in your description. For example for the word \"football\" you cannot use the word foot or ball in your descriptions. Hand gestures, miming, singing, humming, or anything of that nature is not allowed. \n\nIf you break these rules you forfeit the point for that item. \n\nAnd lastly, have fun!</string>
+    <string name="num_teams">Number of Teams</string>
+    <string name="num_players">Number of Players</string>
+    <string name="num_rounds">Number of Rounds</string>
+    <string name="start">Start</string>
+    <string-array name="input_teams">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="input_players">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="input_rounds">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
