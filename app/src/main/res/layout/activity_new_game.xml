@@ -44,7 +44,8 @@
             app:layout_constraintStart_toEndOf="@+id/input_num_teams"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="@string/num_teams" />
+            tools:text="@string/num_teams"
+            android:text="@string/num_teams" />/>
     </TableRow>
     <!-- Row1 - num players -->
     <TableRow android:orientation="horizontal">
@@ -81,7 +82,8 @@
             app:layout_constraintStart_toEndOf="@+id/input_num_players"
             app:layout_constraintTop_toBottomOf="@+id/text_num_teams"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="@string/num_players" />
+            tools:text="@string/num_players"
+            android:text="@string/num_players"/>
     </TableRow>
     <!-- Row2 - num rounds -->
     <TableRow android:orientation="horizontal">
@@ -118,7 +120,8 @@
             app:layout_constraintStart_toEndOf="@+id/input_num_rounds"
             app:layout_constraintTop_toBottomOf="@+id/text_num_players"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="@string/num_rounds" />
+            tools:text="@string/num_rounds"
+            android:text="@string/num_rounds"/>
     </TableRow>
     <!-- Start Button -->
     <TableRow
@@ -132,7 +135,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAlignment="center"
-            tools:text="@string/start" />
+            tools:text="@string/start"
+            android:text="@string/start"/>
     </TableRow>
 
 </TableLayout>

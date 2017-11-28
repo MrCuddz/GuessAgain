@@ -24,7 +24,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_rules_description"
-        tools:text="@string/rules_text" />
+        tools:text="@string/rules_text"
+        android:text="@string/rules_text"/>
 
     <TextView
         android:id="@+id/textView_rules_description"
@@ -37,5 +38,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/rules" />
+        tools:text="@string/rules"
+        android:text="@string/rules"/>
 </android.support.constraint.ConstraintLayout>
