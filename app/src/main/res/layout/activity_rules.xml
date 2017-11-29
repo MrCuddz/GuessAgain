@@ -6,40 +6,59 @@
     android:layout_height="match_parent"
     tools:context="com.a3amshenanigans.guessagain.RulesActivity">
 
-        <TextView
-            android:id="@+id/textView_rules_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/rules"
-            android:textAllCaps="false"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/rules" />
     <TextView
-        android:id="@+id/textView_rules_description"
-        android:layout_width="match_parent"
+        android:id="@+id/textView_rules_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="24dp"
-        android:scrollbars="vertical"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:lineSpacingExtra="4sp"
-        android:text="@string/rules_text"
-        android:textAlignment="viewStart"
+        android:layout_marginTop="24dp"
+        android:text="@string/rules"
         android:textAllCaps="false"
-        android:textColor="?android:attr/editTextColor"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="@string/rules_text" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/rules" />
+
+    <ScrollView
+        android:id="@+id/scrollView_rules_description"
+        android:layout_width="0dp"
+        android:layout_height="374dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_rules_title">
+
+        <TextView
+            android:id="@+id/textView_rules_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fadingEdge="vertical"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/rules_text"
+            android:textAlignment="gravity"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/editTextColor"
+            android:textSize="18sp"
+            android:paddingBottom="10dip"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_rules_title"
+            tools:text="@string/rules_text" />
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
