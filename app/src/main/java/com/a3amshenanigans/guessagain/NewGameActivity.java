@@ -1,5 +1,6 @@
 package com.a3amshenanigans.guessagain;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,9 +26,9 @@ public class NewGameActivity extends AppCompatActivity {
 
     private void initSpinners() {
         //find spinners
-        spinner_teams = (Spinner)findViewById(R.id.input_num_teams);
-        spinner_players = (Spinner)findViewById(R.id.input_num_players);
-        spinner_rounds = (Spinner)findViewById(R.id.input_num_rounds);
+        spinner_teams = findViewById(R.id.input_num_teams);
+        spinner_players = findViewById(R.id.input_num_players);
+        spinner_rounds = findViewById(R.id.input_num_rounds);
         //create array adapters
         ArrayAdapter adapter_teams, adapter_players, adapter_rounds;
         adapter_teams = ArrayAdapter.createFromResource(this, R.array.input_teams, android.R.layout.simple_spinner_dropdown_item);
@@ -45,15 +46,25 @@ public class NewGameActivity extends AppCompatActivity {
 
     private void addListenerOnButton() {
         //find spinners
-        spinner_teams = (Spinner)findViewById(R.id.input_num_teams);
-        spinner_players = (Spinner)findViewById(R.id.input_num_players);
-        spinner_rounds = (Spinner)findViewById(R.id.input_num_rounds);
+        spinner_teams = findViewById(R.id.input_num_teams);
+        spinner_players = findViewById(R.id.input_num_players);
+        spinner_rounds = findViewById(R.id.input_num_rounds);
         //find button
-        button_submit = (Button)findViewById(R.id.button_submit);
+        button_submit = findViewById(R.id.button_submit);
         button_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //store input and pass to new intent
+                int teams, players, rounds;
+                teams = Integer.parseInt(spinner_teams.getSelectedItem().toString());
+                players = Integer.parseInt(spinner_players.getSelectedItem().toString());
+                rounds = Integer.parseInt(spinner_rounds.getSelectedItem().toString());
 
+                Intent confirmGameSettings = new Intent(NewGameActivity.this, ConfirmGameSettingsActivity.class);
+                confirmGameSettings.putExtra("num_teams", teams);
+                confirmGameSettings.putExtra("num_players", players);
+                confirmGameSettings.putExtra("num_rounds", rounds);
+                startActivity(confirmGameSettings);
             }
         });
     }
